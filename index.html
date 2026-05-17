@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DuendeNotes v2</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>🧙‍♂️ DuendeNotes v2</h1>
+
+        <div class="formulario">
+
+            <input 
+                type="text"
+                id="titulo"
+                placeholder="Título de la nota"
+            >
+
+            <textarea 
+                id="contenido"
+                placeholder="Escribe tu nota..."
+            ></textarea>
+
+            <div class="botones">
+
+                <button 
+                    class="agregar"
+                    onclick="agregarNota()"
+                >
+                    ➕ Agregar Nota
+                </button>
+
+                <button 
+                    class="purgar"
+                    onclick="purgarNotas()"
+                >
+                    🧹 Purgar Todo
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="buscador">
+
+            <input 
+                type="text"
+                placeholder="🔍 Buscar notas..."
+                oninput="buscarNotas(this.value)"
+            >
+
+        </div>
+
+        <div class="notas" id="contenedorNotas"></div>
+
+    </div>
+
+    <script src="notas.js"></script>
+
+</body>
+</html>
